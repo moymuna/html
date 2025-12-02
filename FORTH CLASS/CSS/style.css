@@ -1,0 +1,67 @@
+
+
+#homeHeader {
+  background-color: green;
+  width: 100%;
+  height: auto;
+}
+
+#myNav ul,
+#myNav li {
+  list-style: none;
+  float: left;
+  margin: 5px 10px 5px 10px;
+}
+#myNav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+.menu {
+  display: flex;
+}
+.menu li {
+  list-style: none;
+  margin: 5px 10px;
+}
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+.menu a:hover {
+  background-color: white;
+  color: rebeccapurple;
+  padding: 5px;
+  border-radius: 5px;
+}
+/* Hamberger batton hide on desktop */
+.hamberger {
+  font-size: 26px;
+  color: whitw;
+  cursor: pointer;
+  display: none;
+}
+
+.contactTable {
+  width: 100%;
+}
+.contactTable,
+.contactTable tr,
+.contactTable td {
+  border: 1px solid rgb(111, 3, 3);
+  border-collapse: collapse;
+}
+
+#vissionTable,
+#vissionTable tr,
+#vissionTable td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
