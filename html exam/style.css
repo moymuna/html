@@ -1,0 +1,15 @@
+body,
+h1,
+table {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+table,
+tr,
+td {
+  text-align: center;
+  border-color: red;
+  border-collapse: collapse;
+}
