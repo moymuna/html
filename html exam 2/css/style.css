@@ -1,0 +1,18 @@
+#table {
+border-collapse: collapse;
+
+
+}
+header {
+    margin: 0;
+   
+}
+.nav { background-color: darkcyan;
+    display: flex;
+}
+ ul, li {
+    list-style: none; 
+  float: right;
+    padding: 5px;
+    
+}
