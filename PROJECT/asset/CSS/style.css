@@ -1,7 +1,50 @@
-* margine
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    
 
-
-#myNav {
-    display: flex;
-    justify-content: space-between
 }
+.header {
+    width: 100%;
+    height: 10vh;
+    background-color: darkseagreen;
+    padding: 5px;
+}
+
+
+.myNav {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+.myNav .logo{
+    width: 25%;
+    
+}
+.logo img {
+    width: 25%;
+    height: 10vh;
+
+}
+.menu ul , .menu li {
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+}
+#select {
+    background-color: transparent;
+    border: 0;
+}
+.button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    
+}
+.menu {
+    display: flex;
+}
+
