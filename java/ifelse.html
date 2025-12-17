@@ -10,7 +10,7 @@
     <input type="text" id="userName" /><br />
     <button id="button">next</button><br />
 
-  <div >
+  <div id="div" style="display: none;" >
       <label for="">Password</label>
       <input type="password" id="password" /><br />
       <button>Login</button>
@@ -19,9 +19,11 @@
     <script>
       let userName = document.getElementById("userName").value;
       let password = document.getElementById("password").value;
-      if ((userName = "moymuna")) {
-        document.getElementById("result").innerHTML =
-      }
+      if (userName == "moymuna") {
+        document.getElementById("button").innerHTML=div;
+    }else{
+
+    }
     </script>
   </body>
 </html>
