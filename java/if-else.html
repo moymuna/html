@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">User name</label>
+    <input type="text" id="userName" /> <br />
+    <label for="">Passwoard</label>
+    <input type="password" id="password" /><br />
+    <button onclick="login()">Login</button><br>
+    <span id="result"></span>
+    <script>
+      function login() {
+        let userName=document.getElementById("userName").value;
+        let password=document.getElementById("password").value;
+        if (userName == "moymuna" && password == "123456") {
+          document.getElementById("result").innerHTML = "welcome "+userName;
+          document.getElementById("result").style.color = "green";
+        } else {
+          document.getElementById("result").innerText =
+            "Username and Password is incorrect.";
+          document.getElementById("result").style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>
