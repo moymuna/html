@@ -37,4 +37,22 @@
   list-style: none;
   font-size: 25px;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  border-bottom: 4px solid green;
+
+  
+}
+.menu li:focus {
+  border-bottom: 4px solid green;
+
+  
+}
+
+.menu li:active {
+  border-bottom: 4px solid green;
+
+  
 }
