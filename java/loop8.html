@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let userInput=Number.parseInt(prompt("enter number"));
+let number1=0;
+let number2=1;
+document.writeln(number1);
+document.writeln(number2);
+
+for(let i=3; i<=userInput; i++){
+    let number3=number1+number2;
+    number1=number2;
+    number2=number3;
+    document.writeln(number3);
+
+}
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [50, 60, 70, 80, 10, 30, 90];
+      let max = 0;
+      let min = 999999999999999999;
+      for (let sadia = 0; sadia < numbers.length; sadia++) {
+        if (max < numbers[sadia]) {
+          max = numbers[sadia];
+        }
+      }
+      for (let sadia = 0; sadia < numbers.length; sadia++) {
+        if (min > numbers[sadia]) {
+          min = numbers[sadia];
+        }
+      }
+      document.writeln( max);
+      document.writeln(min);
+    </script>
+  </body>
+</html>
