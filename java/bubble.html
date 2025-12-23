@@ -7,17 +7,22 @@
   </head>
   <body>
     <script>
-              let numbers =[];
-      document.writeln(numbers +"<br>");
-      for(let i=0;i<numbers.length-1;i++){
-          for( let j=0; j<numbers.length-i;j++){
-            if(numbers[j]>=numbers[i]-1){
-                let temp = number[j];
-                number[j]=number[i];
-                numbers[i]=temp;
-            }
+      let numbers = [50,60,70,20,30,10,250,260,150,80];
+      let temp =0;
+      document.writeln(numbers + "<br>");
+      for (let i = 0; i < numbers.length-1 ; i++) {
+        for (let j = 0; j < numbers.length -1- i; j++) {
+          if (numbers[j] >= numbers[j] +1) {
+            let temp = numbers[j];
+            numbers[j] = numbers[j]+1;
+            numbers[j] = temp;
           }
+        }
       }
+      document.writeln(numbers);
+  
+
+      
     </script>
   </body>
 </html>
