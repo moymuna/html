@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let price = Number.parseInt (prompt ("input price"));
+        let quentity=Number.parseInt( prompt("enter quentity"));
+        let bill = price *quentity ;
+       
+        document.writeln(bill +"<br>");
+        
+        if(bill>=50){
+             let discount=bill*(2/100);
+        let finalBill=bill-discount;
+        document.writeln(discount + "<br>");
+document.writeln(finalBill + "<br>");
+        }
+    </script>
+    
+</body>
+</html>
