@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <label for="">length</label>
+    <input type="text" id="length" /><br />
+    <label for="">width</label>
+    <input type="text" id="width" oninput="areaPerimeter()" /><br />
+    <label for="">area</label>
+    <span id="area"></span><br />
+    <label for="">perimeter</label>
+    <span id="perimeter"></span><br>
+
+    <script>
+      function areaPerimeter() {
+        let l = parseInt(document.getElementById("length").value);
+        let w = parseInt(document.getElementById("width").value);
+        document.getElementById("area").innerHTML = l * w;
+        document.getElementById("perimeter").innerHTML = 2 * (l + w);
+      }
+    </script>
+</body>
+</html>
