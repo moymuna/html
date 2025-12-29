@@ -1,0 +1,25 @@
+function calculation() {
+  let x = document.getElementById("amount").value;
+
+  let discount = 0;
+    let payment = x;
+    let r = 0;
+
+    if (x >= 100 && x <= 300) {
+      payment = x - x * (10 / 100);
+      discount = x * (10 / 100);
+      r = "10%";
+    } else if (x <= 700) {
+      payment = x - x * (15 / 100);
+      discount = x * (15 / 100);
+      r = "15%";
+    } else if (x <= 1000) {
+      payment = x - x * (20 / 100);
+      discount = x * (20 / 100);
+      r = "20%";
+    } else {
+      payment = x - x * (25 / 100);
+      discount = x * (25 / 100);
+      r = "25%";
+    }
+
