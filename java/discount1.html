@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">Amount</label>
+    <input type="text" id="amount" oninput="calculattor ()" /><br />
+    <label for="">Discount % :</label>
+    <span id="percent"></span><br />
+    <label for="">Discount Amount :</label>
+    <span id="discountAmount"></span><br />
+    <label for="">Final Payment :</label>
+    <span id="finalPayment"></span>
+
+    <script>
+      function calculattor() {
+        let amount = parseInt(document.getElementById("amount").value);
+        let finalPayment = amount - discountAmount;
+        if (amount <= 99) {
+          document.getElementById("finalPayment").innerHTML = amount;
+        } else if (amount >= 100 && amount <= 300) {
+          let percent = 10;
+          document.getElementById("percent").innerHTML = 10 + "%";
+          document.getElementById("discountAmount").innerHTML =
+            (amount * percent) / 100;
+
+          document.getElementById("finalPayment").innerHTML =
+            amount - (amount * percent) / 100;
+        } else if (amount >= 301 && amount <= 700) {
+          let percent = 15;
+          document.getElementById("percent").innerHTML = 15 + "%";
+          document.getElementById("discountAmount").innerHTML =
+            (amount * percent) / 100;
+
+          document.getElementById("finalPayment").innerHTML =
+            amount - (amount * percent) / 100;
+        } else if (amount >= 701 && amount <= 1000) {
+          let percent = 20;
+          document.getElementById("percent").innerHTML = 20 + "%";
+          document.getElementById("discountAmount").innerHTML =
+            (amount * percent) / 100;
+
+          document.getElementById("finalPayment").innerHTML =
+            amount - (amount * percent) / 100;
+        } else {
+          let percent = 25;
+          document.getElementById("percent").innerHTML = 25 + "%";
+          document.getElementById("discountAmount").innerHTML =
+            (amount * percent) / 100;
+
+          document.getElementById("finalPayment").innerHTML =
+            amount - (amount * percent) / 100;
+        }
+      }
+    </script>
+  </body>
+</html>
