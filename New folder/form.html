@@ -7,37 +7,45 @@
     <link rel="stylesheet" href="asset/css/style.css">
   </head>
   <body>
-    <form action="" class="from">
+    <form action="" class="from" id="myForm">
       <fieldset class="fieldset">
         <legend>Registration From</legend>
         <label for="">Name</label>
-        <textarea name="" id="" rows="2" cols="20"></textarea><br />
+        <textarea name="" id="name" rows="2" cols="20"></textarea><br />
 
         <label for="">email</label>
-        <input type="email" /><br />
+        <input type="email" id="email"/><br />
+        <label for="">Password</label>
+        <input type="password" id="password"><br>
+        <label for="">Date of Birth</label>
+        <input type="date " id="dob"><br>
 
         <label for="">address</label>
-        <textarea name="" id="" rows="3" cols="25"></textarea><br />
+        <textarea name="" id="address" rows="3" cols="25"></textarea><br />
 
         <label for="">Gender</label>
-        <input type="radio" />male <input type="radio" />female
-        <input type="radio" />others <br />
+        <input type="radio" name="gender" value="male"/>male
+         <input type="radio"name="gender" value="female" />female
+        <input type="radio"name="gender" value="others" />others <br />
 
         <label for="">Batch</label>
-        <select name="" id="">
-          <option value="">--select one--</option>
-          <option value="">R-69</option>
-          <option value="">R-68</option>
-          <option value="">R-66</option></select
-        ><br />
+        <select name="" id="batch">
+          <option value="selected">--select one--</option>
+          <option value="R-69">R-69</option>
+          <option value="R-68">R-68</option>
+          <option value="R-66">R-66</option>
+          </select><br />
         <label for="">hobby</label>
-        <input type="checkbox" />playing <input type="checkbox" />cooding
-        <input type="checkbox" />travlling <input type="checkbox" />sleeping
+        <input type="checkbox" name="hobby" value="playing" />playing 
+        <input type="checkbox" name="hobby" value="cooding"/>cooding
+        <input type="checkbox" name="hobby" value="travlling"/>travlling 
+        <input type="checkbox" name="hobby" value="sleeping"/>sleeping
         <br />
 
-        <button>submit</button>
-        <button>reset</button>
+       <input type="submit" value="submit">
+        <input type="reset" value="reset">
       </fieldset>
     </form>
+   <script src="asset/js/form.js"></script>
   </body>
 </html>

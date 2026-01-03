@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let day = parseInt(prompt("enter day number"));
+      let result = "";
+      switch (day) {
+        case 1:
+          result = "saturday";
+          break;
+        case 2:
+          result = "sunday";
+          break;
+        case 3:
+          result = "monday";
+          break;
+        case 4:
+          result = "tuesday";
+          break;
+        case 5:
+          result = "wednesday";
+          break;
+        case 6:
+          result = "thursday";
+          break;
+        case 7:
+          result = "friday";
+          break;
+          default:
+            result="invalied";
+      }
+      document.writeln(result);
+    </script>
+  </body>
+</html>
