@@ -13,57 +13,61 @@
       <label for="">contact</label>
       <input type="text" id="contact" /><br />
 
-      <label for="">ramarks</label>
+      <label for="">remarks</label>
       <textarea name="" id="remark" rows="2" cols="25" ></textarea><br />
 
       <label for="">sex</label>
-      <input type="radio" id="sex" />male <input type="radio" id="sex" />female <br />
-      <label for="">course</label>
+      <input type="radio" name="sex" value="male" />male 
+      <input type="radio" name ="sex" value="female" />female <br />
 
-      <input type="checkbox" name="course" value=" course"/>NT 
-      <input type="checkbox" name="course" value=" course" />IAD
-      <input type="checkbox" name="course" value=" course"  />DDD
-       <input type="checkbox" name="course" value=" course"  />ESAD <br />
+      <label for="">course</label>
+      <input type="checkbox" name="course" value=" nt"/>NT 
+      <input type="checkbox" name="course" value=" iad" />IAD
+      <input type="checkbox" name="course" value=" dddd"  />DDD
+       <input type="checkbox" name="course" value=" esad"  />ESAD <br />
 
       <label for="">location</label>
       <select name="" id="location">
-        <option value="">--select one--</option>
+        <option value="--select one--">--select one--</option>
         <option value="banani">banani</option>
         <option value="dhanmandi">dhanmandi</option>
-        <option value="mirpur">mirpur</option></select
+        <option value="mirpur">mirpur</option>
+        </select
       ><br />
-      <input type="submit" id="submit">
+      <input type="submit" id="submit" value="submit">
     </form>
 
-<script>
-    function traineeFrom(){
-        event.preventDefault();
-         let name=document.getElementById("name").value;
-         let contact = document.getElementById("contact").value;
-         let remark=document.getElementById("remark").value;
-         let sex=document.querySelector("input[name='sex']:checked");
-         let course =document.querySelectorAll("input[name='course']:checked");
-         let location=document.getElementById("location").value;
-
-          let courseValue=[];
-          for(let i=0; i>courseValue.length;i++){
-            courseValue.push(course[i].value)
+    <script>
+        function traineeFrom(){
+            event.preventDefault();
+             let name=document.getElementById("name").value;
+             let contact = document.getElementById("contact").value;
+             let remark=document.getElementById("remark").value;
+             let sex=document.querySelector("input[name='sex']:checked");
+             let course =document.querySelectorAll("input[name='course']:checked");
+             let location=document.getElementById("location").value;
+    
+              let courseValue=[];
+              for(let i=0; i<course.length;i++){
+                courseValue.push(course[i].value);
+            }
+            let output= 'name: ' + name + '\n'+
+               'remark: ' + remark + '\n'+  
+               'contact: '+ contact +    '\n'+
+               'sex: '+ sex.value +  '\n'+
+               'course: '+ courseValue +  '\n'+
+               'location: ' + location + '\n';
+               let newWindow=window.open("",'_blank');
+               newWindow.document.writeln ("<pre>"+ output+"</pre>");
+               
+    
+            
+    
+              
         }
-
-          let output= 'name' + name + '\n'+
-           'remark' + remark + '\n'+  
-           'contact'+ concat +    '\n'+
-           'sex'+ sex.value +  '\n'+
-           'course'+ course +  '\n'+
-           'location' + location + '\n'
-
-           let newWindow=window.open("",'_blank');
-           newWindow.document.writeln ("<pre>"+ output+"</pre>")
-
-    }
-     let myFrom=document.getElementById("myFrom");
-     myFrom.addEventListener("submit",traineeFrom);
-</script>
+         let myFrom=document.getElementById("myFrom");
+         myFrom.addEventListener("submit",traineeFrom);
+    </script>
 
   </body>
 </html>
