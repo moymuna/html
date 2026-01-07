@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" id="myFrom">
+      <label for="">name:</label>
+      <input type="text" id="name" /><br />
+
+      <label for="">contact</label>
+      <input type="text" id="contact" /><br />
+
+      <label for="">ramarks</label>
+      <textarea name="" id="remark" rows="2" cols="25" ></textarea><br />
+
+      <label for="">sex</label>
+      <input type="radio" id="sex" />male <input type="radio" id="sex" />female <br />
+      <label for="">course</label>
+
+      <input type="checkbox" name="course" value=" course"/>NT 
+      <input type="checkbox" name="course" value=" course" />IAD
+      <input type="checkbox" name="course" value=" course"  />DDD
+       <input type="checkbox" name="course" value=" course"  />ESAD <br />
+
+      <label for="">location</label>
+      <select name="" id="location">
+        <option value="">--select one--</option>
+        <option value="banani">banani</option>
+        <option value="dhanmandi">dhanmandi</option>
+        <option value="mirpur">mirpur</option></select
+      ><br />
+      <input type="submit" id="submit">
+    </form>
+
+<script>
+    function traineeFrom(){
+        event.preventDefault();
+         let name=document.getElementById("name").value;
+         let contact = document.getElementById("contact").value;
+         let remark=document.getElementById("remark").value;
+         let sex=document.querySelector("input[name='sex']:checked");
+         let course =document.querySelectorAll("input[name='course']:checked");
+         let location=document.getElementById("location").value;
+
+          let courseValue=[];
+          for(let i=0; i>courseValue.length;i++){
+            courseValue.push(course[i].value)
+        }
+
+          let output= 'name' + name + '\n'+
+           'remark' + remark + '\n'+  
+           'contact'+ concat +    '\n'+
+           'sex'+ sex.value +  '\n'+
+           'course'+ course +  '\n'+
+           'location' + location + '\n'
+
+           let newWindow=window.open("",'_blank');
+           newWindow.document.writeln ("<pre>"+ output+"</pre>")
+
+    }
+     let myFrom=document.getElementById("myFrom");
+     myFrom.addEventListener("submit",traineeFrom);
+</script>
+
+  </body>
+</html>
