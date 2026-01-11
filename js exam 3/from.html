@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,66 +7,66 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="" id="myFrom">
-      <label for="">Name:</label>
-      <input type="text" id="name" ><br />
+    <form action="" id="myform">
+      <label for="">name</label>
+      <input type="text" id="name" /><br />
 
-      <label for="">Contact:</label>
-      <input type="text" id="contact" ><br />
+      <label for="">contact</label>
+      <input type="text" id="contact" /><br />
 
-      <label for="">Remarks</label>
-      <textarea name="" id="remark" rows="2" cols="25"></textarea><br />
+      <label for="">remarks</label>
+      <textarea name="" id="remark"></textarea><br>
 
-      <label for="">Sex:</label>
-      <input type="radio" name="sex" value="male" >male
-      <input type="radio" name="sex" value="female" >female <br />
+      <label for="">gender</label>
+      <input type="radio" name="gender" value="male" />male
+      <input type="radio" name="gender" value="female" />female <br />
 
-      <label for="">Course:</label>
-      <input type="checkbox" name="course" value="NT" >NT
-      <input type="checkbox" name="course" value="IAD" >IAD
-      <input type="checkbox" name="course" value="DDD" >DDD
-      <input type="checkbox" name="course" value="ESAD" >ESAD <br />
+      <label for="">course</label>
+      <input type="checkbox" name="course" value="Nt" />NT
+      <input type="checkbox" name="course" value="ddd" />ddd
+      <input type="checkbox" name="course" value="esad" />esad
+      <input type="checkbox" name="course" value="iad" />iad <br />
 
-      <label for="">Location:</label>
+      <label for="">location</label>
       <select name="" id="location">
-        <option value="banani">BANANI</option>
-        <option value="DHANMANDI">DHANMANDI</option>
-        <option value="MIRPUR">MIRPUR</option></select
-      ><br />
+        <option value="mirpur">mirpur</option>
+        <option value="dhanmandi">dhanmandi</option>
+        <option value="banani">banani</option>
+      </select><br>
 
-      <input type="submit"value="submit" >
+      <input type="submit" value="submit">
     </form>
-
     <script>
-      function trineeData(event) {
-        event.preventDefault()
-        let name = document.getElementById("name").value;
-        let contact = document.getElementById("contact").value;
-        let remark = document.getElementById("remark").value;
-        let sex = document.querySelector("input[name='sex'].checked");
-        let course = document.querySelectorAll("input[name='course'].checked");
-        let location = document.getElementById("location").value;
+      function trineeData(event){
+        event.preventDefault();
 
-        let courseValue=[];
-        for (let i=0;  i<course.length;i++){
-          courseValue.push(course[i].value);
-        }
-        let output =
-        "NAME : " + name + "\n" +
-        "CONTACT : " + contact + "\n" +
-        "REMARK : " + remark + "\n" +
-        "SEX : " + sex.value + "\n" +
-        "COURSES : " + courseValue + "\n" +
-        "LOCATION : " + location + "\n" ;
+        let name=document.getElementById("name").value;
+         let contact=document.getElementById("contact").value;
+          let remark=document.getElementById("remark").value;
+           let gender=document.querySelector("input[name='gender']:checked");
+            let course=document.querySelectorAll("input[name='course']:checked");
+             let location=document.getElementById("location").value;
 
-         let newWindow=Window.open("","_blank");
-         newWindow=document.writeln("<pre>"+output+"</pre>");
+             let courseValue=[];
+              for (let i=0;i<course.length;i++){
+                courseValue.push(course[i].value);
+              }
+              let output =
+              "name"+name+"\n"+
+              "contact"+contact+"\n"+
+              "remark"+ remark+"\n"+
+              "gender"+ gender.value+"\n"+
+              "course"+ courseValue+"\n"+
+              "location"+location+"\n";
+
+              let newWindow=window.open("","_blank")
+              newWindow.document.writeln("<pre>"+ output+"</pre>");
       }
-      let myFrom=document.getElementById("myFrom");
-    myFrom.addEventListener("submit",trineeData);
-     
-     
+      let myform=document.getElementById("myform")
+      myform=addEventListener('submit', trineeData);
+
     </script>
-   
   </body>
 </html>
+
+

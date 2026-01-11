@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let email= prompt("ENTER YOUR EMAIL");
+        let pettern=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if(pettern.test(email)){
+            document.writeln("EMAIL IS CORRECT");
+        }else{document.writeln("EMAIL IS INCORRECt");}
+
+    </script>
+</body>
+</html>
