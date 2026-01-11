@@ -42,8 +42,8 @@
         let name = document.getElementById("name").value;
         let contact = document.getElementById("contact").value;
         let remark = document.getElementById("remark").value;
-        let sex = document.querySelector("input[name='sex'].checked");
-        let course = document.querySelectorAll("input[name='course'].checked");
+        let sex = document.querySelector("input[name='sex']:checked");
+        let course = document.querySelectorAll("input[name='course']:checked");
         let location = document.getElementById("location").value;
 
         let courseValue=[];
@@ -58,8 +58,8 @@
         "COURSES : " + courseValue + "\n" +
         "LOCATION : " + location + "\n" ;
 
-         let newWindow=Window.open("","_blank");
-         newWindow=document.writeln("<pre>"+output+"</pre>");
+         let newWindow=window.open("","_blank");
+         newWindow.document.writeln("<pre>"+output+"</pre>");
       }
       let myFrom=document.getElementById("myFrom");
     myFrom.addEventListener("submit",trineeData);
