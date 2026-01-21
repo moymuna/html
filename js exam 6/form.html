@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="myForm">
+        <label for="">name</label>
+        <input type="text" id="name"> <br>
+
+        <label for="">contact</label>
+        <input type="text" id="contact"><br>
+
+        <label for="">remarks</label>
+        <input type="text" id="remarks"><br>
+
+        <label for=""> gender</label>
+        <input type="radio" name="gender" value="male">male
+<input type="radio" name="gender" value="female">female <br>
+        <label for="">courses</label>
+        <input type="checkbox" name="course" value="nt">nt
+         <input type="checkbox" name="course" value="ddd">ddd
+          <input type="checkbox" name="course" value="esad">esad
+           <input type="checkbox" name="course" value="asad">asad <br>
+        <label for="">location</label>
+        <select name="" id="location">
+            <option value="mirpur">mirpur</option>
+            <option value="banani">banani</option>
+            <option value="dhanmandi">dhanmandi</option>
+        </select><br>
+        <input type="submit" value="submit">
+
+    </form>
+    <script>
+        function trineeData(event){
+            event.preventDefault();
+
+            let name=document.getElementById("name").value;
+             let contact=document.getElementById("contact").value;
+              let remarks=document.getElementById("remarks").value;
+               let gender=document.querySelector("input[name='gender']:checked");
+                let courses=document.querySelectorAll("input[name='courses']:checked");
+                 let location=document.getElementById("location").value;
+                   
+                 let courseValue=[]
+                 for (let i=0; i<courses.length;i++){
+                    courseValue.push(courses[i].value);
+                 }
+
+                 let output=
+                 "name "+ name + "\n"+
+                 "contact "+ contact + "\n"+
+                 "remarks "+ remarks + "\n"+
+                 "gender "+gender.value + "\n"+
+                 "courses "+ courseValue +"\n"+
+                 "location "+ location + "\n";
+
+                 let newWindow=window.open("","_blank")
+                 newWindow.document.writeln("<pre>"+ output+"</pre>")
+        }
+        let myForm=document.getElementById("myForm")
+        myForm.addEventListener("submit",trineeData);
+    </script>
+</body>
+</html>
